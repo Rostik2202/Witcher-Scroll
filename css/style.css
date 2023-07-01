@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #000;
+    height: 100%;
+}
+
+:root {
+    --transition: all 0.5s cubic-bezier(0.2, 0.6, 1);
+}
+
+.paralax__slider {
+    height: 100%;
+}
+
+.paralax__wrapper {
+    will-change: transform;
+    transform-style: preserve-3d;
+   /* transition: var(--transition) !important; */
+}
+
+.paralax__slide {
+    overflow: hidden;
+}
+
+.paralax__slide-layer {
+    position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+    /* transition: var(--transition) !important; */
+}
+
+.paralax__slide-layer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    box-shadow: inset 0 0 250px hsla(0, 0%, 0%, 0.705);
+}
+
